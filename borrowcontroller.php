@@ -9,7 +9,7 @@ class borrowcontroller extends Controller
     //
 
     public function borrow(){
-
-        return view('library.borrow');
+        $students = Students::all();
+        return view('library.borrow', compact('students'));
     }
 }
